@@ -1,5 +1,5 @@
 # TRF7960A SHIELD
-TRF7960A RFID ICs are one of the most comprehensive 13.56MHz RFID ICs. This demo shield will you help learn and write drivers to control the RFID system.
+TRF7960A RFID ICs are one of the most comprehensive 13.56MHz RFID ICs. This demo shield will help you learn and write drivers to control the RFID system.
 
 It is 3.3V specific shield. But with a simple improvement it can be modified to work with both 5V and 3.3V. I have not ordered PCBs. But i will share all hardware and firmware sources with public. So far, you can use this design for reference.
 
