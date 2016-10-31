@@ -1,0 +1,57 @@
+1. Keep all decoupling capacitors as close to the IC as possible with the
+high-frequency decoupling capacitor (10 nF) closer than the low-frequency
+decoupling capacitor (2.2 µF).
+2. Place ground vias as close as possible to the ground side of the capacitors
+and the reader IC pins to minimize any possible ground loops.
+3. Place the two inductors at 90° orientations with respect to each other (that
+is, if the first inductor is laid out in a horizontal orientation, the next
+inductor should be placed in a vertical orientation). This arrangement
+minimizes coupling between the two inductors.
+4. If the crystal is changed from an HC49 to another crystal type, the designer
+should pay close attention to the internal load capacitance and adjust the two
+external shunt capacitors accordingly. Follow the recommendations of the crystal
+manufacturer for those values.
+5. There should be a common ground plane for the digital and analog sections.
+The multiple ground sections or islands should have vias that tie the different
+sections of the planes together.
+6. Ensure that the exposed thermal pad at the center of the reader IC is
+properly laid out as specified in the device-specific data sheet (see
+Section 2). This helps to dissipate heat away from the IC. The following
+figures show the suggested layout guidelines for the IC (PCB layout, stensil,
+and vias).
+7. Trace line lengths should be minimized whenever possible. The RF output path,
+crystal connections, and control lines from the reader to the microprocessor
+are the most important. Proper placement of the reader, microprocessor, crystal,
+and RF connection or connector help to minimize these lengths.
+Avoid the following:
+      Crossing of digital lines under analog and RF signal lines.
+      Crossing of digital lines with other digital lines.
+      If the crossings are unavoidable, use 90° crossings to minimize coupling
+      of the lines.
+8. Depending on the production test plan, consider possible implementations of
+test pads or test vias for use during testing. The necessary pads or vias
+should be placed in accordance with the proposed test plan to enable easy
+access to those test points.
+9. If the system implementation is complex (for example, if the RFID reader
+module is a subsystem of a larger system with other modules such as Bluetooth®,
+Wi-Fi®, microprocessors, and clocks), special considerations should be taken to
+ensure that no noise is coupled into the supply lines.
+If needed, special filtering or regulator considerations should be used to
+minimize or eliminate noise in these unique systems. This helps to ensure
+optimal RFID reader performance.
+10. A suggested reference schematic with the output match from 4 O to 50 O is
+provided in the data sheet and the EVM user's guide (see Section 2). If the
+customer chooses to follow this suggested schematic, the following conditions
+should be verified as each implementation will be slightly different.
+(a) Verify the TX output power
+    (i) If the desired output is detected, then the component and system matches
+    the EVM.
+    (ii) If not detected, then the component value or quality is incorrect.
+(b) Verify the output impedance
+    (i) If 50 O, then the match is correct and maximum power transfer will be
+    achieved.
+    If not 50 O, then it will require tuning of the output to obtain a 50-O
+    output match. When this is achieved, you will achieve maximum power transfer.
+11. Avoid crossing of digital lines under RF signal lines. Also, avoid crossing
+of digital lines with other digital lines whenever possible. If the crossings
+are unavoidable, use 90° crossings to minimize coupling of the lines.
